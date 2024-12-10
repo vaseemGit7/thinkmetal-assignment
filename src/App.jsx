@@ -3,6 +3,7 @@ import Header from "./components/Header.jsx";
 import HeroSection from "./components/HeroSection.jsx";
 import HighlightsSection from "./components/HighlightsSection.jsx";
 import ProgessArchieve from "./components/ProgressArchieve.jsx";
+import Testimonial from "./components/Testimonials.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <FeaturesSection />
         <HighlightsSection />
         <ProgessArchieve />
+        <Testimonial />
       </main>
     </>
   );
