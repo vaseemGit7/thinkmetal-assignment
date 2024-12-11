@@ -1,3 +1,4 @@
+import CallToAction from "./components/CallToAction.jsx";
 import DemoSection from "./components/DemoSection.jsx";
 import FeaturesSection from "./components/FeaturesSection.jsx";
 import Header from "./components/Header.jsx";
@@ -19,6 +20,7 @@ function App() {
         <Testimonial />
         <Partners />
         <DemoSection />
+        <CallToAction />
       </main>
     </>
   );
