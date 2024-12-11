@@ -1,7 +1,36 @@
 import codeFeatures from "../assets/code-features.svg";
 import feedbackFeatures from "../assets/feedback-features.svg";
+import { useRef, useEffect } from "react";
 
 const FeaturesSection = () => {
+  const codeRef = useRef();
+  const feedbackRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const codeEle = codeRef.current;
+    const feedbackEle = feedbackRef.current;
+
+    if (codeEle) observer.observe(codeEle);
+    if (feedbackEle) observer.observe(feedbackEle);
+
+    return () => {
+      if (codeEle) observer.unobserve(codeEle);
+      if (feedbackEle) observer.unobserve(feedbackEle);
+    };
+  }, []);
   return (
     <section className="bg-[#111111]">
       <div className="grid grid-cols-2 gap-20 text-[#FFFFFF] max-w-[110rem] mx-auto py-28">
@@ -23,12 +52,18 @@ const FeaturesSection = () => {
           </div>
           <p className="mt-6 text-lg font-semibold">See how it works</p>
         </div>
-        <div className="bg-[#282828] rounded-3xl flex items-center justify-center">
+        <div
+          ref={codeRef}
+          className="animate-features bg-[#282828] rounded-3xl flex items-center justify-center hover:scale-105"
+        >
           <img src={codeFeatures} />
         </div>
       </div>
       <div className="grid grid-cols-2 gap-20 text-[#FFFFFF] max-w-[110rem] mx-auto py-28">
-        <div className="bg-[#282828] rounded-3xl flex items-center justify-center">
+        <div
+          ref={feedbackRef}
+          className="animate-features bg-[#282828] rounded-3xl flex items-center justify-center hover:scale-105"
+        >
           <img src={feedbackFeatures} />
         </div>
         <div className="self-center">
