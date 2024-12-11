@@ -1,6 +1,7 @@
 import CallToAction from "./components/CallToAction.jsx";
 import DemoSection from "./components/DemoSection.jsx";
 import FeaturesSection from "./components/FeaturesSection.jsx";
+import Footer from "./components/Footer.jsx";
 import Header from "./components/Header.jsx";
 import HeroSection from "./components/HeroSection.jsx";
 import HighlightsSection from "./components/HighlightsSection.jsx";
@@ -22,6 +23,7 @@ function App() {
         <DemoSection />
         <CallToAction />
       </main>
+      <Footer />
     </>
   );
 }
