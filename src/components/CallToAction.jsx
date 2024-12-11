@@ -1,7 +1,10 @@
+import logoIcon from "../assets/logo-icon.svg";
+
 const CallToAction = () => {
   return (
     <section className="bg-[#111111] py-24">
       <div className="flex flex-col justify-center items-center gap-6 text-[#FFFFFF]">
+        <img className="h-20 w-auto" src={logoIcon}></img>
         <h4 className="font-semibold text-3xl text-center">
           Increase your team’s visibility and alignment
         </h4>

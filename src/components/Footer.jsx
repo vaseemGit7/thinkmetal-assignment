@@ -1,8 +1,11 @@
+import logoIcon from "../assets/logo-icon.svg";
+
 const Footer = () => {
   return (
     <div className="bg-neutral-950 py-24">
       <footer className="max-w-[110rem] mx-auto py-4 text-[#FFFFFF]">
-        <div className="flex justify-between max-w-screen-md">
+        <div className="flex justify-between max-w-screen-lg">
+          <img className="h-16 w-auto" src={logoIcon}></img>
           <div className="flex flex-col gap-6">
             <p className="text-base font-semibold">Product</p>
             <a href="" className="text-[#9D9FA1] text-base font-normal">
