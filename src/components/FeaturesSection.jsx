@@ -11,9 +11,9 @@ const FeaturesSection = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+            entry.target.classList.add("animate");
           } else {
-            entry.target.classList.remove("visible");
+            entry.target.classList.remove("animate");
           }
         });
       },
